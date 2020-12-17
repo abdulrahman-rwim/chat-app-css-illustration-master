@@ -1,0 +1,22 @@
+body {
+  font-family: $font;
+  margin: 0;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+footer {
+  padding-top: 6em;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: $chat-left;
+    font-weight: bolder;
+    transition: all;
+    &:hover {
+      color: $radio-button-outline;
+      transition: 250ms ease-out;
+    }
+  }
+}

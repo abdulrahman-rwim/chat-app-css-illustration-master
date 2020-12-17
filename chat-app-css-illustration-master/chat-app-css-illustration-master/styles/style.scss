@@ -1,0 +1,307 @@
+@import "_varibles", "_globals";
+/* =======================
+ backgrounds
+  =============== */
+.vibrant__background {
+  background: linear-gradient(to bottom, $Light-Magenta, $Light-Violet);
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  border-radius: 0 0 320px 320px;
+  left: -3%;
+  position: absolute;
+  z-index: -1;
+}
+.vibrant__background2 {
+  background: rgba($color: $sub-heading, $alpha: 0.1);
+  width: 100%;
+  max-width: 650px;
+  height: 100vh;
+  border-radius: 300px 300px 0 0;
+  right: -11%;
+  top: 20%;
+  position: absolute;
+  z-index: -1;
+}
+/* ======================
+main container wrapper
+================ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ======================
+appliction
+ ================== */
+.app {
+  width: 300px;
+  margin-left: 7em;
+  border: 12px solid $White;
+  border-radius: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.07);
+  /* ==================
+nav styles
+=============== */
+  &__nav {
+    background: linear-gradient(to right, $Light-Violet, $Light-Magenta);
+    color: $White;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border-radius: 19px 19px 3px 3px;
+    position: relative;
+  }
+  &__notch {
+    width: 150px;
+    padding: 10px;
+    border-radius: 0 0 16px 16px;
+    background-color: #fff;
+    position: absolute;
+    left: 22.5%;
+    top: 0;
+  }
+  &__arrow {
+    font-size: 1.1rem;
+    color: #fff;
+    opacity: 1;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+  &__avatar__image {
+    margin-right: 1em;
+    margin-top: 1em;
+    border: 1px solid $White;
+    width: 30px;
+    border-radius: 50%;
+  }
+  &__text {
+    h2 {
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: 0.8rem;
+    }
+    span {
+      font-size: 0.7rem;
+      opacity: 0.5;
+    }
+  }
+  &__menu {
+    width: 30px;
+    height: 50px;
+    margin-left: auto;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    span {
+      display: block;
+      width: 3px;
+      margin-left: 1em;
+      margin-bottom: 0.2em;
+      height: 3px;
+      background: #fff;
+      &:first-child {
+        margin-top: 1.3em;
+      }
+    }
+  }
+}
+/* =====================
+chat section 
+================= */
+.chat {
+  background: $app-background;
+  border-radius: 0 0 18px 18px;
+  padding: 0.5em 0.8em 0.8em 0.8em;
+  display: flex;
+  flex-direction: column;
+  &__message {
+    font-size: 0.6rem;
+    color: $chat-left;
+    background: rgba($color: $sub-heading, $alpha: 0.2);
+    padding: 1em;
+    border-radius: 15px 15px 15px 5px;
+    max-width: 170px;
+  }
+  &__message2 {
+    font-size: 0.6rem;
+    padding: 1em;
+    border-radius: 15px 15px 5px 15px;
+    max-width: 170px;
+    background: $White;
+    align-self: flex-end;
+  }
+  &__message3 {
+    font-size: 0.6rem;
+    padding: 1.3em;
+    max-width: 190px;
+    border-radius: 15px 15px 15px 5px;
+    background: linear-gradient(to right, $Light-Magenta, $Light-Violet);
+    color: $White;
+    margin-bottom: 0;
+
+    span {
+      float: right;
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
+    .chat__circle {
+      width: 10px;
+      height: 10px;
+      padding: 0.5em;
+      margin-right: 1em;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      float: left;
+    }
+  }
+
+  &__images {
+    align-self: flex-end;
+
+    img {
+      width: 40px;
+      border-radius: 10px;
+    }
+  }
+  &__typing {
+    padding: 0.3em 0;
+
+    font-size: 0.7rem;
+    background: #fff;
+    border-radius: 50px;
+    margin-top: 1.3em;
+    color: $place-holder-text;
+
+    p {
+      display: inline-block;
+      margin-left: 1em;
+    }
+    /* =========================
+chat submit button style
+=================== */
+    span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      background: $Violet-submit-button-background;
+      color: #fff;
+      text-align: center;
+      float: right;
+      width: 30px;
+      height: 30px;
+      padding: 0.4em;
+      margin-top: 0.2em;
+      margin-right: 0.5em;
+      border-radius: 50%;
+      &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    }
+    /* --------****-------- */
+  }
+  label {
+    position: relative;
+  }
+  &__text__area {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0.7em;
+    width: 200px;
+    background: #fff;
+    color: $place-holder-text;
+  }
+  &__button {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 700;
+    background: $Violet-submit-button-background;
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7%;
+    right: 1%;
+    transition: all;
+
+    &:hover {
+      cursor: pointer;
+      background: transparent;
+      transition: 250ms ease-out;
+      border: 1px solid $Violet-submit-button-background;
+      color: $Violet-submit-button-background;
+    }
+  }
+}
+/* =====================
+content section
+================= */
+.content {
+  width: 44%;
+  padding: 1em;
+
+  h3 {
+    font-size: 2.9rem;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+    color: $main-heading;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: $paragraph;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .vibrant__background {
+    width: 200px;
+    height: 70vh;
+    border-radius: 0 0 400px;
+  }
+  .vibrant__background2 {
+    width: 400px;
+    height: 80vh;
+    top: 60%;
+    left: 50%;
+    border-radius: 800px 800px 0 0;
+  }
+  .container {
+    display: block;
+    padding: 5.5em 2em 2em 2em;
+  }
+  .app {
+    margin: 0 auto;
+  }
+  .content {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 0 0;
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
+  footer {
+    padding: 0 0 1em 0;
+  }
+}
