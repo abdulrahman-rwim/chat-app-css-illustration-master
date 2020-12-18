@@ -125,6 +125,9 @@ chat section
   padding: 0.5em 0.8em 0.8em 0.8em;
   display: flex;
   flex-direction: column;
+ h3 {
+  margin:0;
+ }
   &__message {
     font-size: 0.6rem;
     color: $chat-left;
